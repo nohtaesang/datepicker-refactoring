@@ -1,0 +1,148 @@
+body,
+#root,
+.App {
+	/* margin-top: 100px; */
+	margin-left: 0;
+	padding: 0;
+}
+
+.date-picker {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100px;
+}
+/* input-wrapper */
+.input-wrapper {
+	position: relative;
+}
+.input-wrapper > input {
+	position: relative;
+	width: 100%;
+}
+
+/* calendar-wrapper */
+.calendar-wrapper {
+	width: 400px;
+	position: absolute;
+	z-index: 5;
+	top: 25px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	border: solid 1px grey;
+}
+
+.calendar-wrapper > .header {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 50px;
+	background: #f1f1f1;
+	border-radius: 10px 10px 0 0;
+}
+.calendar-wrapper > .header > .navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	/*  */
+	height: 50px;
+	border-bottom: solid 1px grey;
+}
+
+.calendar-wrapper > .header > .navigation > .navigation-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.calendar-wrapper > .header > .navigation > .cur-month {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	height: 100%;
+	cursor: pointer;
+}
+
+/* month-wrapper */
+
+.calendar-wrapper > .month-wrapper > .day-names {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 25px;
+	border-bottom: solid 1px grey;
+}
+
+.calendar-wrapper > .month-wrapper > .day-names > .day-name {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.calendar-wrapper > .month-wrapper > .month {
+	display: flex;
+	flex-direction: column;
+	border-bottom: solid 1px grey;
+}
+
+.calendar-wrapper > .month-wrapper > .month > .week {
+	display: flex;
+	flex-direction: row;
+}
+
+.calendar-wrapper > .month-wrapper > .month > .week > .day {
+	flex: 1;
+	justify-content: center;
+	height: 75px;
+	overflow: hidden;
+	cursor: pointer;
+	/* border-radius: 10px; */
+}
+.calendar-wrapper > .month-wrapper > .month > .week > .day:hover {
+	background: #f1f1f1;
+}
+
+.calendar-wrapper > .month-wrapper > .month > .week > .day > .day-date {
+	flex: 1;
+	text-align: center;
+	height: 25px;
+	line-height: 25px;
+}
+
+.calendar-wrapper > .month-wrapper > .month > .week > .day > .day-date.opa {
+	opacity: 0.5;
+}
+
+.calendar-wrapper > .month-wrapper > .month > .week > .day > .day-mark {
+	flex: 1;
+	text-align: center;
+	height: 25px;
+	line-height: 25px;
+	overflow: hidden;
+	font-size: 14px;
+}
+
+/* footer */
+
+.calendar-wrapper > .footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.calendar-wrapper > .footer > .footer-btn {
+	font-size: 20px;
+	margin-right: 15px;
+}
